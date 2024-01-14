@@ -9,7 +9,7 @@ import { Link } from 'react-router-dom'
 const BookingsPage = () => {
     const [bookings, setBookings] = useState([])
     useEffect(() => {
-        axios.get('/api/bookings').then(response => {
+        axios.get('/bookings').then(response => {
             setBookings(response.data)
         })
     }, [])
