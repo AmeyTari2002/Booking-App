@@ -14,7 +14,7 @@ const PlacePage = () => {
         if (!id) {
             return
         }
-        axios.get(`/api/places/${id}`).then(Response => {
+        axios.get(`/places/${id}`).then(Response => {
             // console.log(Response)
             setPlace(Response.data)
         })
