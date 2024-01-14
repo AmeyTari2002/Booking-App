@@ -8,7 +8,7 @@ const RegisterPage = () => {
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
 
-    console.log(name)
+    // console.log(name)
     const registerUser = async(event)=>{
         event.preventDefault()
         try{

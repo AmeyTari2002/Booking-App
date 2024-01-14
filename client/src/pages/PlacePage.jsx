@@ -9,13 +9,13 @@ import AddressLink from '../AddressLink'
 const PlacePage = () => {
     const [place, setPlace] = useState([])
     const { id } = useParams()
-    console.log(id)
+    // console.log(id)
     useEffect(() => {
         if (!id) {
             return
         }
         axios.get(`/places/${id}`).then(Response => {
-            console.log(Response)
+            // console.log(Response)
             setPlace(Response.data)
         })
     }, [id])
@@ -32,7 +32,7 @@ const PlacePage = () => {
         </AddressLink>
           <PlaceGallery place={place}/>
 
-            <div className='mt-4 gap-8 grid grid-cols-1 md:grid-cols-[2fr_1fr]'>
+            <div className='mt-4 gap-8 grid grid-cols-1 md:grid-cols-[2fr_1fr] '>
                 <div>
                     <div className='my-4'>
                         <h2 className='font-semibold text-2xl text-justify' >Description</h2>

@@ -27,7 +27,7 @@ const BookingWidget = ({ place }) => {
         numberOfNights = differenceInCalendarDays(new Date(checkOut), new Date(checkIn))
     }
 
-    console.log(numberOfNights)
+    // console.log(numberOfNights)
     async function bookinThisPlace() {
 
         const response =await axios.post('/bookings', {
