@@ -18,7 +18,7 @@ const ProfilePage = () => {
   }
 
   const logout = async () => {
-    await axios.post('/api/logout')
+    await axios.post('/logout')
     setRedirectHomePage('/')
     setUser(null)
   }
