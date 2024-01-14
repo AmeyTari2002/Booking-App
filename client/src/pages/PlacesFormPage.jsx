@@ -54,7 +54,7 @@ const PlacesFormPage = () => {
         if(id)
         {
             // update
-            await axios.put('/places', {
+            await axios.put('/api/places', {
                 id, ...placeData
             })
             setRedirect(true)
