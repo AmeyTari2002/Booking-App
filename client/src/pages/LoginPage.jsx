@@ -15,7 +15,7 @@ export const LoginPage = () => {
         ev.preventDefault();
        
         try{
-        const {data} = await axios.post('/api/login', {email,password},{withCredentials:true})
+        const {data} = await axios.post('/login', {email,password},{withCredentials:true})
         
         alert("Login Successful")
         setredirect(true);
