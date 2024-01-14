@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import Image from './Image'
 
 
 const PlaceGallery = ({ place }) => {
@@ -20,7 +21,7 @@ const PlaceGallery = ({ place }) => {
                     </div>
                     {place?.photos?.length > 0 && place.photos.map(photo => (
                         <div className='w-full flex flex-row justify-center overflow-hidden '>
-                            <img className='object-fill' src={'http://localhost:4000/uploads/' + photo} alt="" />
+                            <Image className='object-fill' src={ photo} alt="" />
                         </div>
 
                     ))}
@@ -35,20 +36,20 @@ const PlaceGallery = ({ place }) => {
                 <div >
                     {place.photos?.[0] && (
                         <div>
-                            <img onClick={() => setShowAllPhoto(true)} className='aspect-square object-cover' src={'http://localhost:4000/uploads/' + place.photos[0]} alt="" />
+                            <Image onClick={() => setShowAllPhoto(true)} className='aspect-square object-cover' src={ place.photos[0]} alt="" />
                         </div>
                     )}
                 </div>
                 <div className='grid '>
                     {place.photos?.[1] && (
 
-                        <img onClick={() => setShowAllPhoto(true)} className='aspect-square object-cover' src={'http://localhost:4000/uploads/' + place.photos[1]} alt="" />
+                        <Image onClick={() => setShowAllPhoto(true)} className='aspect-square object-cover' src={place.photos[1]} alt="" />
 
                     )}
                     <div>
                         {place.photos?.[2] && (
                             <div className='overflow-hidden'>
-                                <img onClick={() => setShowAllPhoto(true)} className='aspect-square object-cover relative top-2' src={'http://localhost:4000/uploads/' + place.photos[2]} alt="" />
+                                <Image onClick={() => setShowAllPhoto(true)} className='aspect-square object-cover relative top-2' src={place.photos[2]} alt="" />
                             </div>
                         )}
                     </div>

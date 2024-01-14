@@ -8,7 +8,7 @@ import format from 'date-fns/format'
 
 const BookingPage = () => {
     const { id } = useParams()
-    console.log(id)
+    // console.log(id)
     const [booking, setBooking] = useState(null)
     useEffect(() => {
         if (id) {
@@ -28,7 +28,7 @@ const BookingPage = () => {
     }
 
     return (
-        <div className='my-8'>
+        <div className='sm:ml-5'>
             <h1 className='text-2xl'> {booking.place.title}   </h1>
             <AddressLink>
                 {booking.place.address}

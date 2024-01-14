@@ -14,7 +14,7 @@ const BookingsPage = () => {
         })
     }, [])
 
-    console.log(bookings)
+    // console.log(bookings)
     return (
         <div>
             <AccountNav />

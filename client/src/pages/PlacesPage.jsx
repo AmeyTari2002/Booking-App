@@ -14,7 +14,7 @@ const PlacesPage = () => {
         })
     },[])
 
-    console.log(places)
+    // console.log(places)
 
     return (
         <div>
@@ -27,7 +27,7 @@ const PlacesPage = () => {
                         Add new Places
                     </Link>
                 </div>
-                <div className='mt-4 '>
+                <div className='mt-4'>
                     {places.length>0 && places.map((place)=>(
                         <Link to={'/account/places/'+ place._id} className='flex cursor-pointer gap-4 bg-gray-100 p-4 rounded-2xl '>
                             <div className='flex h-32 w-32 bg-gray-200 grow shrink-0'>
