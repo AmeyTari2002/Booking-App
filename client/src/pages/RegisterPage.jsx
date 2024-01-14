@@ -12,7 +12,7 @@ const RegisterPage = () => {
     const registerUser = async(event)=>{
         event.preventDefault()
         try{
-             await axios.post('/api/register', {
+             await axios.post('/register', {
                 name,
                 email,
                 password,
