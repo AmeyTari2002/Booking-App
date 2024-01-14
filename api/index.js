@@ -195,7 +195,7 @@ app.get('/api/places/:id', async (req, res) => {
     res.json(await Place.findById(id));
 })
 
-app.put('/places', async (req, res) => {
+app.put('/api/places', async (req, res) => {
     mongoose.connect(process.env.MONGO_URL)
     const { token } = req.cookies
     const { id, title, address, addedPhotos,
