@@ -1,8 +1,7 @@
 export default function Image({ src, ...rest }) {
-    const baseUrl = import.meta.env.VITE_API_BASE_URL_IMAGES;
-    src = src && src.includes('https://')
+    src = src && src.includes('https://') 
     ? src 
-    : `${baseUrl}/uploads/${src}`
+    : 'http://localhost:4000/uploads/' + src;
     return (
         <img{...rest} src={src} alt={''} />
     )
