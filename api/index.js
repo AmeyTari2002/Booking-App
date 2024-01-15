@@ -21,7 +21,7 @@ const bucket = 'amey-booking-app'
 app.use(express.json())  //parse json
 app.use(cookieParser())
 
-app.use('/uploads', express.static(__dirname + '/uploads'))
+app.use('/api/uploads', express.static(__dirname + '/uploads'))
 app.use(cors({
     credentials: true,
     origin: "https://ameytari-booking-app.vercel.app" 
