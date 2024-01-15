@@ -24,7 +24,7 @@ app.use(cookieParser())
 app.use('/uploads', express.static(__dirname + '/uploads'))
 app.use(cors({
     credentials: true,
-    origin: process.env.PORT 
+    origin: ["https://ameytari-booking-app.vercel.app"] 
 }));
 
 // console.log(process.env.MONGO_URL)
