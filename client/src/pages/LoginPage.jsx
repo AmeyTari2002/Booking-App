@@ -38,8 +38,8 @@ export const LoginPage = () => {
             <div className='mb-64'>
                 <h1 className='text-4xl mb-4 text-center'>Login</h1>
                 <form className='max-w-md mx-auto ' onSubmit={handleLoginSubmit}>
-                    <input type="email" placeholder="youremail.com" name="" value={email} onChange={e => { setEmail(e.target.value) }} />
-                    <input type="password" placeholder='password' name="" value={password} onChange={e => { setPassword(e.target.value) }}/>
+                    <input type="email" placeholder="youremail.com" name="" value={email} required onChange={e => { setEmail(e.target.value) }} />
+                    <input type="password" placeholder='password' name="" value={password} required onChange={e => { setPassword(e.target.value) }}/>
                     <button className='primary'>Login</button>
                     <div className='text-center py-2 text-gray-500'>
                         Don't have an account yet?<Link className='underline text-black' to={'/register'}> Register Now</Link>
