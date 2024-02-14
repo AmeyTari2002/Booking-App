@@ -128,7 +128,7 @@ const PlacesFormPage = () => {
                     </div>
                 </div>
                 <div>
-                    <button><Link to={'/'} className='primary mt-4'>Save</Link></button>
+                    <button className='primary mt-4'><Link to={'/'} >Save</Link></button>
                 </div>
             </form>
 
