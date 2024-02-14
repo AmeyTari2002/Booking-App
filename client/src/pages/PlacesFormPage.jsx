@@ -79,10 +79,10 @@ const PlacesFormPage = () => {
             <form onSubmit={savePlace} >
                 <h2 className='text-2xl mt-4'>Title</h2>
                 <p className='text-gray-500 text-sm'>Title for your place. should be short and catchy as in advertisment</p>
-                <input value={title} onChange={ev => setTitle(ev.target.value)} type="text" placeholder='title  for My Lovely apt' />
+                <input value={title} required onChange={ev => setTitle(ev.target.value)} type="text" placeholder='title  for My Lovely apt' />
                 <h2 className='text-2xl mt-4'>Address</h2>
                 <p className='text-gray-500 text-sm'>Address to the place</p>
-                <input value={address} onChange={ev => setAddress(ev.target.value)} type="text" placeholder='address' />
+                <input value={address} required onChange={ev => setAddress(ev.target.value)} type="text" placeholder='address' />
                 <h2 className='text-2xl mt-4'>Photos</h2>
                 <p className='text-gray-500 text-sm'>more= better</p>
 
@@ -98,31 +98,31 @@ const PlacesFormPage = () => {
                 </div>
                 <h2 className='text-2xl mt-4'>Extra Info</h2>
                 <p className='text-gray-500 text-sm'>House Rules ,etc</p>
-                <textarea value={extraInfo} onChange={ev => setExtraInfo(ev.target.value)} />
+                <textarea value={extraInfo}  onChange={ev => setExtraInfo(ev.target.value)} />
                 <h2 className='text-2xl mt-4'>Check in&out times , max guests</h2>
                 <p className='text-gray-500 text-sm'>Add check in and Check out times </p>
                 <div className='grid sm:grid-cols-2 lg:grid-cols-4'>
                     <div>
                         <h3 className='mt-2 -mb-1'>Check in time</h3>
-                        <input value={checkIn}
+                        <input value={checkIn} required
                             onChange={ev => setCheckIn(ev.target.value)}
                             type="text" placeholder='16:00' />
                     </div>
                     <div>
                         <h3 className='mt-2 -mb-1'>Check Out time</h3>
-                        <input value={checkOut}
+                        <input value={checkOut} required
                             onChange={ev => setCheckOut(ev.target.value)}
                             type="text" placeholder='16:00' />
                     </div>
                     <div>
                         <h3 className='mt-2 -mb-1'>Max Number Guest</h3>
-                        <input value={maxGuest}
+                        <input value={maxGuest} required
                             onChange={ev => setMaxGuest(ev.target.value)}
                             type="text" placeholder='2' />
                     </div>
                     <div>
                         <h3 className='mt-2 -mb-1'>Price Per</h3>
-                        <input value={price}
+                        <input value={price} required
                             onChange={ev => setPrice(ev.target.value)}
                             type="text" placeholder='2' />
                     </div>
