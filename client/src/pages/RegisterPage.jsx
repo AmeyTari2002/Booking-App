@@ -29,9 +29,9 @@ const RegisterPage = () => {
             <div className='mb-64' onSubmit={registerUser}>
                 <h1 className='text-4xl mb-4 text-center'>Register</h1>
                 <form className='max-w-md mx-auto '>
-                    <input type="text" placeholder="Amey Tari" name="" id="name" value={name} onChange={(e) => { setName(e.target.value) }} />
-                    <input type="email" placeholder="youremail.com" name="" id="email" value={email} onChange={(e) => { setEmail(e.target.value) }} />
-                    <input type="password" placeholder='password' name="" id="password" value={password} onChange={(e) => { setPassword(e.target.value) }} />
+                    <input type="text" placeholder="Amey Tari" name="" id="name" required value={name} onChange={(e) => { setName(e.target.value) }} />
+                    <input type="email" placeholder="youremail.com" name="" id="email" required value={email} onChange={(e) => { setEmail(e.target.value) }} />
+                    <input type="password" placeholder='password' name="" id="password" required value={password} onChange={(e) => { setPassword(e.target.value) }} />
                     <button  className='primary'>Register</button>
                     <div className='text-center py-2 text-gray-500'>
                         Already a Member?<Link className='underline text-black' to={'/login'}> Login Here</Link>
