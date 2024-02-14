@@ -4,7 +4,7 @@ import Perks from '../Perks';
 import axios from 'axios';
 import PhotosUploader from './PhotosUploader';
 import AccountNav from '../AccountNav';
-import { Link, Navigate, useParams } from 'react-router-dom';
+import {Navigate, useParams } from 'react-router-dom';
 
 
 
@@ -76,7 +76,7 @@ const PlacesFormPage = () => {
     return (
         <div>
             <AccountNav/>
-            <form  >
+            <form onSubmit={savePlace} >
                 <h2 className='text-2xl mt-4'>Title</h2>
                 <p className='text-gray-500 text-sm'>Title for your place. should be short and catchy as in advertisment</p>
                 <input value={title} onChange={ev => setTitle(ev.target.value)} type="text" placeholder='title  for My Lovely apt' />
@@ -128,7 +128,7 @@ const PlacesFormPage = () => {
                     </div>
                 </div>
                 <div>
-                    <button className='primary mt-4'><Link to={'/'} >Save</Link></button>
+                    <button className='primary mt-4'>Save</button>
                 </div>
             </form>
 
