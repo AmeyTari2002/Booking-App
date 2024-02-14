@@ -90,7 +90,7 @@ const PlacesFormPage = () => {
 
                 <h2 className='text-2xl mt-4'>Description</h2>
                 <p className='text-gray-500 text-sm'>Description of place</p>
-                <textarea value={description} onChange={ev => setDescription(ev.target.value)} />
+                <textarea value={description} required onChange={ev => setDescription(ev.target.value)} />
                 <h2 className='text-2xl mt-4'>Perks</h2>
                 <p className='text-gray-500 text-sm'>Select all the  of perks of your place</p>
                 <div className='grid grid-cols-2 gap-2 md:grid-cols-3 lg:grid-cols-6' >
@@ -98,7 +98,7 @@ const PlacesFormPage = () => {
                 </div>
                 <h2 className='text-2xl mt-4'>Extra Info</h2>
                 <p className='text-gray-500 text-sm'>House Rules ,etc</p>
-                <textarea value={extraInfo}  onChange={ev => setExtraInfo(ev.target.value)} />
+                <textarea value={extraInfo} required onChange={ev => setExtraInfo(ev.target.value)} />
                 <h2 className='text-2xl mt-4'>Check in&out times , max guests</h2>
                 <p className='text-gray-500 text-sm'>Add check in and Check out times </p>
                 <div className='grid sm:grid-cols-2 lg:grid-cols-4'>
